@@ -1,0 +1,40 @@
+.sn_banner{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  ul{
+    &:first-child{
+      width: 1000%;
+      transform: translateX(-10%);
+      -webkit-transform: translateX(-10%);
+      li{
+        width: 10%;
+        float: left;
+        a{
+          display: block;
+          width: 100%;
+          img{
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+    &:last-child{
+      position: absolute;
+      right: 0;
+      bottom:20rem/@bfs;
+      li{
+        width: 15rem/@bfs;
+        height: 15rem/@bfs;
+        border-radius: 50%;
+        background: #fff;
+        float: left;
+        margin-right: 20rem/@bfs;
+        &.now{
+          background: @mainColor;
+        }
+      }
+    }
+  }
+}

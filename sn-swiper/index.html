@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏宁-首页</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="less/index.css">
+    <style>
+        .swiper-container img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="sn_container">
+    <header class="sn_search">
+        <a href="#" class="icon_category"></a>
+        <form action="">
+            <span class="icon_search"></span>
+            <input type="search" placeholder="60寸电视">
+        </form>
+        <a href="#" class="icon_cart"></a>
+    </header>
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><a href="#"><img src="images/banner01.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner02.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner03.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner04.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner05.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner06.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner07.jpg" alt=""></a></li>
+            <li class="swiper-slide"><a href="#"><img src="images/banner08.jpg" alt=""></a></li>
+        </ul>
+        <ul class="swiper-pagination"></ul>
+    </div>
+</div>
+<script src="js/swiper.min.js"></script>
+<script>
+    new Swiper('.swiper-container',{
+        /*配置*/
+        autoplay:{
+            delay:1000,
+            disableOnInteraction:false
+        },
+        loop:true,
+        pagination:{
+            el:'.swiper-pagination'
+        }
+    });
+    //1.自动播放功能
+    //2.无缝循环
+    //3.点容器
+</script>
+</body>
+</html>

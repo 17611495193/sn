@@ -1,0 +1,60 @@
+/*--基础样式--*/
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-size: 14px;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+input{
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+.ml10{
+  margin-left: 10px;
+}
+.mr10{
+  margin-right: 10px;
+}
+.mt10{
+  margin-top: 10px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.f_left{
+  float: left;
+}
+.f_right{
+  float: right;
+}
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+//版心容器
+.sn_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+/*--混入--*/
+//@media (min-width: 320px) {
+//  html{
+//    font-size: 320px/@psdWidth * @bfs;
+//  }
+//}
+
+//.adapter(@dw:320px){
+//  @media (min-width: @dw){
+//    html{
+//      font-size: @dw/@psdWidth*@bfs;
+//    }
+//  }
+//}
+//.adapter(380px);
+
+//遍历 设备宽度数组
+.adapter(@index) when (@index <= @len){
+  @media(min-width: extract(@deviceWidth,@index)){
+    html{
+      font-size: extract(@deviceWidth,@index)/@psdWidth*@bfs;
+    }
+  }
+  .adapter(@index + 1);
+}
+
+.adapter(1);

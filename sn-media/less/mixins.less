@@ -1,0 +1,28 @@
+/*--混入--*/
+//@media (min-width: 320px) {
+//  html{
+//    font-size: 320px/@psdWidth * @bfs;
+//  }
+//}
+
+//.adapter(@dw:320px){
+//  @media (min-width: @dw){
+//    html{
+//      font-size: @dw/@psdWidth*@bfs;
+//    }
+//  }
+//}
+//.adapter(380px);
+
+//遍历 设备宽度数组 @index次数  extract  提取数组中的数据  提取的时候以序号开始  所以.adapter(1)为1
+.adapter(@index) when (@index <= @len){
+  @media(min-width: extract(@deviceWidth,@index)){
+    html{
+      font-size: extract(@deviceWidth,@index)/@psdWidth*@bfs;
+    }
+  }
+  .adapter(@index + 1);
+}
+
+.adapter(1);
+
